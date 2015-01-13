@@ -25,7 +25,7 @@
 	# is trying to allocate a huge buffer for a TEXT field.  
 	# Try setting 'text size' to a more reasonable limit 
 	text size = <%= node['freetds']['text_size'] %>
-<% @node['freetds']['servers'].each do |server|%>
+<% node['freetds']['servers'].each do |server|%>
 
 <% if server['description']%>
 # <%= server['description']%>
